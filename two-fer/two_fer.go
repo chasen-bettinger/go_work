@@ -6,10 +6,8 @@ import (
 
 // ShareWith prints a statement with a specific name if given
 func ShareWith(name string) string {
-	var printedName = "you"
-	var nameIsNotNull = len(name) > 0
-	if nameIsNotNull {
-		printedName = name
+	if name == "" {
+		name = "you"
 	}
-	return fmt.Sprintf("One for %v, one for me.", printedName)
+	return fmt.Sprintf("One for %v, one for me.", name)
 }
