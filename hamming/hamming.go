@@ -14,7 +14,7 @@ func Distance(a, b string) (int, error) {
 	}
 
 	for key := range a {
-		if string(a[key]) != string(b[key]) {
+		if a[key] != b[key] {
 			hammingDistance++
 		}
 	}
